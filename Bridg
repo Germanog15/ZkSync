@@ -1,0 +1,12 @@
+SELECT
+"block_time" as time, 
+  "from" as user, 
+  "value"/1e18 as value, 
+  "nonce" as nonce, 
+  "hash" as tx 
+FROM
+  ethereum.transactions 
+WHERE
+  "to" = 0x32400084C286CF3E17e7B677ea9583e60a000324
+  and "value" > 0 
+  and "success" 
